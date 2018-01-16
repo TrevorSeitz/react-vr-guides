@@ -7,7 +7,10 @@
     "bundle": "node node_modules/react-vr/scripts/bundle.js",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
     "devtools": "react-devtools",
-    "test": "jest"
+    "test": "jest",
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build",
+    "flow": "flow"
   },
   "dependencies": {
     "ovrui": "~2.0.0",
@@ -18,12 +21,16 @@
     "react-vr-web": "~2.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-jest": "^19.0.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "^1.9.1",
+    "flow-bin": "^0.63.1",
     "jest": "^19.0.2",
     "react-devtools": "^2.5.2",
     "react-test-renderer": "16.0.0",
-    "xopen": "1.0.0"
+    "xopen": "1.0.0",
+    "flow-bin": "^0.41.0"
   },
   "jest": {
     "preset": "react-vr"
