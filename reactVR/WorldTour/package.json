@@ -7,29 +7,19 @@
     "bundle": "node node_modules/react-vr/scripts/bundle.js",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
     "devtools": "react-devtools",
-    "test": "jest",
-    "build": "babel src/ -d lib/",
-    "prepublish": "npm run build",
-    "flow": "flow"
+    "test": "jest"
   },
   "dependencies": {
-    "babel-plugin-relay": "^1.4.1",
-    "nuclide": "^0.275.0",
     "ovrui": "~2.0.0",
-    "react": "^16.0.0",
-    "react-compiler": "^1.0.3",
+    "react": "16.0.0",
     "react-native": "~0.48.0",
+    "three": "^0.87.0",
     "react-vr": "~2.0.0",
-    "react-vr-web": "~2.0.0",
-    "relay-compiler": "^1.4.1",
-    "three": "^0.87.0"
+    "react-vr-web": "~2.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "babel-jest": "^19.0.0",
-    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "^1.9.1",
-    "flow-bin": "^0.41.0",
     "jest": "^19.0.2",
     "react-devtools": "^2.5.2",
     "react-test-renderer": "16.0.0",

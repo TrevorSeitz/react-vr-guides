@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 
 import { View, Text, Pano, AppRegistry, asset, StyleSheet } from 'react-vr';
 
+const palces = [
+  {
+    title: 'Island Paradise'
+  },
+  {
+    title: 'Louvre - Paris'
+  },
+  {
+    title: 'San Francisco'
+  },
+  {
+    title: 'Zion National Park'
+  }
+]
+
 class WorldTour extends Component {
   constructor() {
     super();
@@ -26,6 +41,22 @@ class WorldTour extends Component {
             {this.state.showMenu ? 'Close Menu' : 'Open Menu'}
           </Text>
         </View>
+        {
+          this.state.showMenu ?
+            <View>
+              {
+                places.map(place => {
+                  return (
+                    <View>
+                      <Text>{place.title}</Text>
+                    </View>
+                  )
+                })
+              }
+            </View>
+          :
+            <View></View>
+        }
       </View>
     )
   }
