@@ -52,7 +52,11 @@ class WorldTour extends Component {
       {
         places.map((place, index) => {
           return (
-                    <View style={styles.menuItem} key={index}>
+                    <View
+                      style={styles.menuItem}
+                      key={index}
+                      onEnter={() => this.setState({place: place.image})}
+                      >
                       <Text style={styles.menuItemText}>{place.title}</Text>
                     </View>
                   )
